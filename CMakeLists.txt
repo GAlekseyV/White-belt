@@ -1,23 +1,70 @@
 cmake_minimum_required(VERSION 3.12)
-project(coursera)
+project(White_belt)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 
-add_executable(coursera
-        week_2_task_10/main.cpp
-        week_2_task_11/main.cpp
-        week_2_task_12/main.cpp
-        week_2_task_13/main.cpp
-        week_2_task_14/main.cpp
-        week_2_task_15/main.cpp
-        week_2_task_16/main.cpp
-        week_2_task_17/main.cpp
-        week_2_task_18/main.cpp
-        week_3_task_1/main.cpp
-        week_3_task_2/main.cpp
-        week_3_task_3/main.cpp
-        week_3_task_4/main.cpp
-        week_3_task_5/main.cpp
-        week_3_task_6/main.cpp
-        week_3_task_7/main.cpp
-        week_3_task_8/main.cpp)
+set(WEEKS
+        Week_2
+        Week_3
+        Week_4
+        Week_5
+        )
+
+set(Week_2
+        1_to_do_list
+        2_anagramms
+        3_capitals_dict
+        4_bus_routes
+        5_bus_routes_2
+        6_unique_strings
+        7_print_map_values
+        8_sinonyms
+        9_bus_routes_3
+        )
+
+set(Week_3
+        1_sort
+        2_sort_2
+        3_sort_strings
+        4_name_history
+        5_name_history_2
+        6_revers_string
+        7_name_history_3
+        8_incognizable
+        )
+
+set(Week_4
+        1_lecture_title
+        2_function
+        3_function_2
+        4_1_print_file
+        4_2_rw_file
+        5_print_file_2
+        6_read_csv_file
+        7_student
+        8_1_rational_1
+        8_2_rational_2
+        8_3_rational_3
+        8_4_rational_4
+        8_5_rational_5
+        9_exception
+        10_rational_6
+        11_rational_7
+        12_ack_time_server
+        )
+
+set(Week_5
+        final_task
+        )
+
+# create a project file per tutorial
+foreach(WEEK ${WEEKS})
+    foreach(TASK ${${WEEK}})
+        file(GLOB SOURCE
+                "${WEEK}/${TASK}/*.h"
+                "${WEEK}/${TASK}/*.cpp"
+                )
+        set(NAME "${WEEK}_${TASK}")
+        add_executable(${NAME} ${SOURCE})
+    endforeach(TASK)
+endforeach(WEEK)

@@ -4,11 +4,15 @@ project(White_belt)
 set(CMAKE_CXX_STANDARD 17)
 
 set(WEEKS
+        Week_1
         Week_2
         Week_3
         Week_4
         Week_5
         )
+
+set(Week_1
+        1_min_string)
 
 set(Week_2
         1_to_do_list

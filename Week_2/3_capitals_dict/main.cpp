@@ -1,119 +1,119 @@
 /*
- * Реализуйте справочник столиц стран.
- * На вход программе поступают следующие запросы:
-   - CHANGE_CAPITAL country new_capital — изменение столицы страны country на new_capital,
-   либо добавление такой страны с такой столицей, если раньше её не было.
-   - RENAME old_country_name new_country_name — переименование страны из old_country_name
-   в new_country_name.
-   - ABOUT country — вывод столицы страны country.
-   - DUMP — вывод столиц всех стран.
-   Формат ввода
-   В первой строке содержится количество запросов Q, в следующих Q строках — описания запросов.
-   Все названия стран и столиц состоят лишь из латинских букв, цифр и символов подчёркивания.
-   Формат вывода
-   Выведите результат обработки каждого запроса:
-   В ответ на запрос CHANGE_CAPITAL country new_capital выведите
-   - Introduce new country country with capital new_capital, если страны country раньше не
-   существовало;
-   - Country country hasn't changed its capital, если страна country до текущего момента
-   имела столицу new_capital;
-   - Country country has changed its capital from old_capital to new_capital, если страна
-   country до текущего момента имела столицу old_capital, название которой не совпадает с
-   названием new_capital.
-   В ответ на запрос RENAME old_country_name new_country_name выведите
-   - Incorrect rename, skip, если новое название страны совпадает со старым,
-   страна old_country_name не существует или страна new_country_name уже существует;
-   - Country old_country_name with capital capital has been renamed to new_country_name,
-   если запрос корректен и страна имеет столицу capital.
-   В ответ на запрос ABOUT country выведите
-   - Country country doesn't exist, если страны с названием country не существует;
-   - Country country has capital capital, если страна country существует и имеет столицу capital.
-   В ответ на запрос DUMP выведите
-   - There are no countries in the world, если пока не было добавлено ни одной страны;
-   разделённые пробелами пары country/capital, описывающие столицы всех стран и упорядоченные
-   по названию страны, если в мире уже есть хотя бы одна страна.
+ * Р РµР°Р»РёР·СѓР№С‚Рµ СЃРїСЂР°РІРѕС‡РЅРёРє СЃС‚РѕР»РёС† СЃС‚СЂР°РЅ.
+ * РќР° РІС…РѕРґ РїСЂРѕРіСЂР°РјРјРµ РїРѕСЃС‚СѓРїР°СЋС‚ СЃР»РµРґСѓСЋС‰РёРµ Р·Р°РїСЂРѕСЃС‹:
+   - CHANGE_CAPITAL country new_capital вЂ” РёР·РјРµРЅРµРЅРёРµ СЃС‚РѕР»РёС†С‹ СЃС‚СЂР°РЅС‹ country РЅР°
+ new_capital, Р»РёР±Рѕ РґРѕР±Р°РІР»РµРЅРёРµ С‚Р°РєРѕР№ СЃС‚СЂР°РЅС‹ СЃ С‚Р°РєРѕР№ СЃС‚РѕР»РёС†РµР№, РµСЃР»Рё СЂР°РЅСЊС€Рµ РµС‘ РЅРµ
+ Р±С‹Р»Рѕ.
+   - RENAME old_country_name new_country_name вЂ” РїРµСЂРµРёРјРµРЅРѕРІР°РЅРёРµ СЃС‚СЂР°РЅС‹ РёР·
+ old_country_name РІ new_country_name.
+   - ABOUT country вЂ” РІС‹РІРѕРґ СЃС‚РѕР»РёС†С‹ СЃС‚СЂР°РЅС‹ country.
+   - DUMP вЂ” РІС‹РІРѕРґ СЃС‚РѕР»РёС† РІСЃРµС… СЃС‚СЂР°РЅ.
+   Р¤РѕСЂРјР°С‚ РІРІРѕРґР°
+   Р’ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРµ СЃРѕРґРµСЂР¶РёС‚СЃСЏ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїСЂРѕСЃРѕРІ Q, РІ СЃР»РµРґСѓСЋС‰РёС… Q СЃС‚СЂРѕРєР°С… вЂ”
+ РѕРїРёСЃР°РЅРёСЏ Р·Р°РїСЂРѕСЃРѕРІ. Р’СЃРµ РЅР°Р·РІР°РЅРёСЏ СЃС‚СЂР°РЅ Рё СЃС‚РѕР»РёС† СЃРѕСЃС‚РѕСЏС‚ Р»РёС€СЊ РёР· Р»Р°С‚РёРЅСЃРєРёС… Р±СѓРєРІ,
+ С†РёС„СЂ Рё СЃРёРјРІРѕР»РѕРІ РїРѕРґС‡С‘СЂРєРёРІР°РЅРёСЏ. Р¤РѕСЂРјР°С‚ РІС‹РІРѕРґР° Р’С‹РІРµРґРёС‚Рµ СЂРµР·СѓР»СЊС‚Р°С‚ РѕР±СЂР°Р±РѕС‚РєРё
+ РєР°Р¶РґРѕРіРѕ Р·Р°РїСЂРѕСЃР°: Р’ РѕС‚РІРµС‚ РЅР° Р·Р°РїСЂРѕСЃ CHANGE_CAPITAL country new_capital РІС‹РІРµРґРёС‚Рµ
+   - Introduce new country country with capital new_capital, РµСЃР»Рё СЃС‚СЂР°РЅС‹ country
+ СЂР°РЅСЊС€Рµ РЅРµ СЃСѓС‰РµСЃС‚РІРѕРІР°Р»Рѕ;
+   - Country country hasn't changed its capital, РµСЃР»Рё СЃС‚СЂР°РЅР° country РґРѕ С‚РµРєСѓС‰РµРіРѕ
+ РјРѕРјРµРЅС‚Р° РёРјРµР»Р° СЃС‚РѕР»РёС†Сѓ new_capital;
+   - Country country has changed its capital from old_capital to new_capital,
+ РµСЃР»Рё СЃС‚СЂР°РЅР° country РґРѕ С‚РµРєСѓС‰РµРіРѕ РјРѕРјРµРЅС‚Р° РёРјРµР»Р° СЃС‚РѕР»РёС†Сѓ old_capital, РЅР°Р·РІР°РЅРёРµ
+ РєРѕС‚РѕСЂРѕР№ РЅРµ СЃРѕРІРїР°РґР°РµС‚ СЃ РЅР°Р·РІР°РЅРёРµРј new_capital. Р’ РѕС‚РІРµС‚ РЅР° Р·Р°РїСЂРѕСЃ RENAME
+ old_country_name new_country_name РІС‹РІРµРґРёС‚Рµ
+   - Incorrect rename, skip, РµСЃР»Рё РЅРѕРІРѕРµ РЅР°Р·РІР°РЅРёРµ СЃС‚СЂР°РЅС‹ СЃРѕРІРїР°РґР°РµС‚ СЃРѕ СЃС‚Р°СЂС‹Рј,
+   СЃС‚СЂР°РЅР° old_country_name РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РёР»Рё СЃС‚СЂР°РЅР° new_country_name СѓР¶Рµ
+ СЃСѓС‰РµСЃС‚РІСѓРµС‚;
+   - Country old_country_name with capital capital has been renamed to
+ new_country_name, РµСЃР»Рё Р·Р°РїСЂРѕСЃ РєРѕСЂСЂРµРєС‚РµРЅ Рё СЃС‚СЂР°РЅР° РёРјРµРµС‚ СЃС‚РѕР»РёС†Сѓ capital. Р’ РѕС‚РІРµС‚
+ РЅР° Р·Р°РїСЂРѕСЃ ABOUT country РІС‹РІРµРґРёС‚Рµ
+   - Country country doesn't exist, РµСЃР»Рё СЃС‚СЂР°РЅС‹ СЃ РЅР°Р·РІР°РЅРёРµРј country РЅРµ
+ СЃСѓС‰РµСЃС‚РІСѓРµС‚;
+   - Country country has capital capital, РµСЃР»Рё СЃС‚СЂР°РЅР° country СЃСѓС‰РµСЃС‚РІСѓРµС‚ Рё РёРјРµРµС‚
+ СЃС‚РѕР»РёС†Сѓ capital. Р’ РѕС‚РІРµС‚ РЅР° Р·Р°РїСЂРѕСЃ DUMP РІС‹РІРµРґРёС‚Рµ
+   - There are no countries in the world, РµСЃР»Рё РїРѕРєР° РЅРµ Р±С‹Р»Рѕ РґРѕР±Р°РІР»РµРЅРѕ РЅРё РѕРґРЅРѕР№
+ СЃС‚СЂР°РЅС‹; СЂР°Р·РґРµР»С‘РЅРЅС‹Рµ РїСЂРѕР±РµР»Р°РјРё РїР°СЂС‹ country/capital, РѕРїРёСЃС‹РІР°СЋС‰РёРµ СЃС‚РѕР»РёС†С‹ РІСЃРµС…
+ СЃС‚СЂР°РЅ Рё СѓРїРѕСЂСЏРґРѕС‡РµРЅРЅС‹Рµ РїРѕ РЅР°Р·РІР°РЅРёСЋ СЃС‚СЂР°РЅС‹, РµСЃР»Рё РІ РјРёСЂРµ СѓР¶Рµ РµСЃС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРЅР°
+ СЃС‚СЂР°РЅР°.
  */
 #include <algorithm>
 #include <iostream>
 #include <map>
 #include <string>
 using namespace std;
-//  Вывод столиц всех стран.
-void dump(const map<string, string>& m){
-    if(m.size() > 0){
-        for(auto item : m){
-            cout << item.first << "/" << item.second<<" ";
-        }
-        cout << endl;
-    }else{
-        cout << "There are no countries in the world" << endl;
+//  Р’С‹РІРѕРґ СЃС‚РѕР»РёС† РІСЃРµС… СЃС‚СЂР°РЅ.
+void dump(const map<string, string>& m) {
+  if (m.size() > 0) {
+    for (auto item : m) {
+      cout << item.first << "/" << item.second << " ";
     }
+    cout << endl;
+  } else {
+    cout << "There are no countries in the world" << endl;
+  }
 }
 
-// Вывод столицы страны country.
-void about(map<string, string>& m, const string& country){
-    if(m.count(country) > 0){
-        cout << "Country " << country << " has capital " << m[country] << endl;
-    }else{
-        cout << "Country " << country << " doesn't exist" << endl;
-    }
+// Р’С‹РІРѕРґ СЃС‚РѕР»РёС†С‹ СЃС‚СЂР°РЅС‹ country.
+void about(map<string, string>& m, const string& country) {
+  if (m.count(country) > 0) {
+    cout << "Country " << country << " has capital " << m[country] << endl;
+  } else {
+    cout << "Country " << country << " doesn't exist" << endl;
+  }
 }
 
-//  Переименование страны из old_country_name в new_country_name
-void rename(map<string, string>& m, const string& o_c_name, const string& n_c_name){
-    if(o_c_name == n_c_name || m.count(o_c_name) < 1 || m.count(n_c_name) > 0){
-        cout << "Incorrect rename, skip" << endl;
-    }else{
-        string cap = m[o_c_name];
-        cout << "Country " << o_c_name << " with capital "
-             << cap << " has been renamed to "
-             << n_c_name << endl;
-        m.erase(o_c_name);
-        m[n_c_name] = cap;
-    }
+//  РџРµСЂРµРёРјРµРЅРѕРІР°РЅРёРµ СЃС‚СЂР°РЅС‹ РёР· old_country_name РІ new_country_name
+void rename(map<string, string>& m, const string& o_c_name,
+            const string& n_c_name) {
+  if (o_c_name == n_c_name || m.count(o_c_name) < 1 || m.count(n_c_name) > 0) {
+    cout << "Incorrect rename, skip" << endl;
+  } else {
+    string cap = m[o_c_name];
+    cout << "Country " << o_c_name << " with capital " << cap
+         << " has been renamed to " << n_c_name << endl;
+    m.erase(o_c_name);
+    m[n_c_name] = cap;
+  }
 }
 
-//  Изменение столицы страны country на new_capital, либо добавление такой страны
-//  с такой столицей, если раньше её не было.
-void change_capital(map<string, string>& m, const string& country, const string& cap){
-    if(m.count(country) == 0){
-        m[country] = cap;
-        cout << "Introduce new country " << country << " with capital "
-             << m[country] << endl;
-    }else if(m[country] == cap){
-        cout << "Country " << country << " hasn't changed its capital" << endl;
-    }else if(m[country] != cap){
-        cout << "Country " << country << " has changed its capital from "
-             << m[country] << " to " << cap << endl;
-        m[country] = cap;
-    }
+//  РР·РјРµРЅРµРЅРёРµ СЃС‚РѕР»РёС†С‹ СЃС‚СЂР°РЅС‹ country РЅР° new_capital, Р»РёР±Рѕ РґРѕР±Р°РІР»РµРЅРёРµ С‚Р°РєРѕР№
+//  СЃС‚СЂР°РЅС‹ СЃ С‚Р°РєРѕР№ СЃС‚РѕР»РёС†РµР№, РµСЃР»Рё СЂР°РЅСЊС€Рµ РµС‘ РЅРµ Р±С‹Р»Рѕ.
+void change_capital(map<string, string>& m, const string& country,
+                    const string& cap) {
+  if (m.count(country) == 0) {
+    m[country] = cap;
+    cout << "Introduce new country " << country << " with capital "
+         << m[country] << endl;
+  } else if (m[country] == cap) {
+    cout << "Country " << country << " hasn't changed its capital" << endl;
+  } else if (m[country] != cap) {
+    cout << "Country " << country << " has changed its capital from "
+         << m[country] << " to " << cap << endl;
+    m[country] = cap;
+  }
 }
 
+int main() {
+  map<string, string> capBook;
+  int q;
+  cin >> q;
+  string command, country, new_capital, old_country, new_coutnry;
 
-int main()
-{
-    map<string, string> capBook;
-    int q;
-    cin >> q;
-    string command, country, new_capital, old_country, new_coutnry;
-
-    for(int i = 0; i < q; ++i){
-        cin >> command;
-        if(command == "CHANGE_CAPITAL"){
-            cin >> country >> new_capital;
-            change_capital(capBook, country, new_capital);
-        }else if(command == "RENAME"){
-            cin >> old_country >> new_coutnry;
-            rename(capBook, old_country, new_coutnry);
-        }else if(command == "ABOUT"){
-            cin >> country;
-            about(capBook, country);
-        }else if(command == "DUMP"){
-            dump(capBook);
-        }
+  for (int i = 0; i < q; ++i) {
+    cin >> command;
+    if (command == "CHANGE_CAPITAL") {
+      cin >> country >> new_capital;
+      change_capital(capBook, country, new_capital);
+    } else if (command == "RENAME") {
+      cin >> old_country >> new_coutnry;
+      rename(capBook, old_country, new_coutnry);
+    } else if (command == "ABOUT") {
+      cin >> country;
+      about(capBook, country);
+    } else if (command == "DUMP") {
+      dump(capBook);
     }
+  }
 
-
-
-    return 0;
+  return 0;
 }

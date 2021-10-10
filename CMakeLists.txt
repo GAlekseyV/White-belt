@@ -18,7 +18,8 @@ set(Week_1
         4_cost_calculation
         5_even_numbers
         6_second_occurrence
-        7_gcd)
+        7_gcd
+        8_binary_numbers)
 
 set(Week_2
         1_to_do_list

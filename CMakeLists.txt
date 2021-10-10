@@ -13,7 +13,9 @@ set(WEEKS
 
 set(Week_1
         1_min_string
-        2_equation)
+        2_equation
+        3_division
+        4_cost_calculation)
 
 set(Week_2
         1_to_do_list

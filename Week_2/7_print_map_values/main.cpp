@@ -1,6 +1,6 @@
 /*
- * Напишите функцию BuildMapValuesSet, принимающую на вход словарь map<int, string>
- * и возвращающую множество значений этого словаря:
+ * РќР°РїРёС€РёС‚Рµ С„СѓРЅРєС†РёСЋ BuildMapValuesSet, РїСЂРёРЅРёРјР°СЋС‰СѓСЋ РЅР° РІС…РѕРґ СЃР»РѕРІР°СЂСЊ map<int,
+ * string> Рё РІРѕР·РІСЂР°С‰Р°СЋС‰СѓСЋ РјРЅРѕР¶РµСЃС‚РІРѕ Р·РЅР°С‡РµРЅРёР№ СЌС‚РѕРіРѕ СЃР»РѕРІР°СЂСЏ:
  */
 #include <iostream>
 #include <map>
@@ -9,10 +9,10 @@
 
 using namespace std;
 
-set<string> BuildMapValuesSet(const map<int, string>& m){
-    set<string> ans;
-    for(auto item : m){
-        ans.insert(item.second);
-    }
-    return ans;
+set<string> BuildMapValuesSet(const map<int, string>& m) {
+  set<string> ans;
+  for (auto item : m) {
+    ans.insert(item.second);
+  }
+  return ans;
 }

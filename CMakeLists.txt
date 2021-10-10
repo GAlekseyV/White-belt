@@ -15,7 +15,10 @@ set(Week_1
         1_min_string
         2_equation
         3_division
-        4_cost_calculation)
+        4_cost_calculation
+        5_even_numbers
+        6_second_occurrence
+        7_gcd)
 
 set(Week_2
         1_to_do_list

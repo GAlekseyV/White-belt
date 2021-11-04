@@ -22,7 +22,9 @@ set(Week_1
         8_binary_numbers)
 
 set(Week_2
-        1_to_do_list
+        vector/average_temperature
+        vector/queue
+        vector/todo_list
         2_anagramms
         3_capitals_dict
         4_bus_routes
@@ -68,6 +70,7 @@ set(Week_5
         final_task
         )
 
+
 # create a project file per tutorial
 foreach(WEEK ${WEEKS})
     foreach(TASK ${${WEEK}})
@@ -76,6 +79,7 @@ foreach(WEEK ${WEEKS})
                 "${WEEK}/${TASK}/*.cpp"
                 )
         set(NAME "${WEEK}_${TASK}")
+        string(REPLACE "/" "_" NAME "${NAME}")
         add_executable(${NAME} ${SOURCE})
     endforeach(TASK)
 endforeach(WEEK)

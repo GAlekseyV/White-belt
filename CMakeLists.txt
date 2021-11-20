@@ -25,10 +25,10 @@ set(Week_2
         vector/average_temperature
         vector/queue
         vector/todo_list
-        2_anagramms
-        3_capitals_dict
-        4_bus_routes
-        5_bus_routes_2
+        map/anagramms
+        map/capitals_dict
+        map/bus_routes
+        map/bus_routes_2
         6_unique_strings
         7_print_map_values
         8_sinonyms

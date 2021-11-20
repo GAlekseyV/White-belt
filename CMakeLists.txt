@@ -29,10 +29,10 @@ set(Week_2
         map/capitals_dict
         map/bus_routes
         map/bus_routes_2
-        6_unique_strings
-        7_print_map_values
-        8_sinonyms
-        9_bus_routes_3
+        sets/unique_strings
+        sets/map_values
+        sets/sinonyms
+        sets/bus_routes_3
         )
 
 set(Week_3

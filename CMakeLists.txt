@@ -36,8 +36,8 @@ set(Week_2
         )
 
 set(Week_3
-        1_sort
-        2_sort_2
+        algorithms/sort_numbers
+        algorithms/sort_strings
         3_sort_strings
         4_name_history
         5_name_history_2

@@ -38,9 +38,9 @@ set(Week_2
 set(Week_3
         algorithms/sort_numbers
         algorithms/sort_strings
-        3_sort_strings
-        4_name_history
-        5_name_history_2
+        structs_and_classes/sorted_strings
+        structs_and_classes/name_history
+        structs_and_classes/name_history_2
         6_revers_string
         7_name_history_3
         8_incognizable

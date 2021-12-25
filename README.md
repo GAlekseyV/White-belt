@@ -44,3 +44,22 @@
 * [Множество значений словаря](/Week_2/sets/map_values/Task.md)
 * [Синонимы](/Week_2/sets/sinonyms/Task.md)
 * [Автобусные остановки - 3](/Week_2/sets/bus_routes_3/Task.md)
+
+## Задачи недели 3
+
+### Алгоритмы
+
+* [Сортировка целых чисел по модулю](/Week_3/algorithms/sort_numbers/Task.md)
+* [Сортировка без учёта регистра](/Week_3/algorithms/sort_strings/Task.md)
+
+### Структуры и классы
+
+* [Отсортированные строки](/Week_3/structs_and_classes/sorted_strings/Task.md)
+* [Имена и фамилии](/Week_3/structs_and_classes/name_history/Task.md)
+* [Имена и фамилии - 2](/Week_3/structs_and_classes/name_history_2/Task.md)
+
+### Конструкторы
+
+* [Строка](/Week_3/constructors/revers_string/Task.md)
+* [Имена и фамилии - 3](/Week_3/constructors/name_history_3/Task.md)
+* [Сбособы инициализации](/Week_3/constructors/incognizable/Task.md)

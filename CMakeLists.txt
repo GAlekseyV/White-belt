@@ -41,9 +41,9 @@ set(Week_3
         structs_and_classes/sorted_strings
         structs_and_classes/name_history
         structs_and_classes/name_history_2
-        6_revers_string
-        7_name_history_3
-        8_incognizable
+        constructors/revers_string
+        constructors/name_history_3
+        constructors/incognizable
         )
 
 set(Week_4

@@ -47,23 +47,23 @@ set(Week_3
         )
 
 set(Week_4
-        1_lecture_title
-        2_function
-        3_function_2
-        4_1_print_file
-        4_2_rw_file
-        5_print_file_2
-        6_read_csv_file
-        7_student
-        8_1_rational_1
-        8_2_rational_2
-        8_3_rational_3
-        8_4_rational_4
-        8_5_rational_5
-        9_exception
-        10_rational_6
-        11_rational_7
-        12_ack_time_server
+        lecture_title
+        structs_and_classes/function
+        structs_and_classes/function_2
+        files_and_streams/print_file
+        files_and_streams/rw_file
+        files_and_streams/print_file_2
+        files_and_streams/read_csv_file
+        files_and_streams/students
+        overload/rational_1
+        overload/rational_2
+        overload/rational_3
+        overload/rational_4
+        overload/rational_5
+        exceptions/exception
+        exceptions/rational_6
+        exceptions/rational_7
+        exceptions/ack_time_server
         )
 
 set(Week_5

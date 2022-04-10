@@ -63,3 +63,29 @@
 * [Строка](/Week_3/constructors/revers_string/Task.md)
 * [Имена и фамилии - 3](/Week_3/constructors/name_history_3/Task.md)
 * [Сбособы инициализации](/Week_3/constructors/incognizable/Task.md)
+
+## Задачи недели 4
+
+### Структуры и классы
+
+* [Структура LectureTitle](/Week_4/structs_and_classes/lecture_title/Task.md)
+* [Обратимая функция](/Week_4/structs_and_classes/function/Task.md)
+* [Обратимая функция с умножением и делением](Week_4/structs_and_classes/function_2/Task.md)
+
+### Работа с текстовыми файлами и потоками
+
+* [Работа с файлами](/Week_4/files_and_streams/print_file/Task.md)
+* [Вывод с точьностью](/Week_4/files_and_streams/print_file_2/Task.md)
+* [Чтение и вывод таблицы](/Week_4/files_and_streams/read_csv_file/Task.md)
+* [Список студентов](/Week_4/files_and_streams/students/Task.md)
+
+### Выполнение операция "естественным" образом
+
+* [Класс Rational](/Week_4/overload/Task.md)
+
+### Исключения
+
+* [Функция EnsureEqual](/Week_4/exceptions/exception/Task.md)
+* [Исключения в классе Rational](/Week_4/exceptions/rational_6/Task.md)
+* [Калькулятор обыкновенных дробей](/Week_4/exceptions/rational_7/Task.md)
+* [Работа с сервером времени](/Week_4/exceptions/ack_time_server/Task.md)

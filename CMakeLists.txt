@@ -30,7 +30,7 @@ set(Week_2
         map/bus_routes
         map/bus_routes_2
         sets/unique_strings
-        sets/map_values
+        # sets/map_values
         sets/sinonyms
         sets/bus_routes_3
         )
@@ -38,18 +38,17 @@ set(Week_2
 set(Week_3
         algorithms/sort_numbers
         algorithms/sort_strings
-        structs_and_classes/sorted_strings
+        # structs_and_classes/sorted_strings
         structs_and_classes/name_history
-        structs_and_classes/name_history_2
-        constructors/revers_string
-        constructors/name_history_3
-        constructors/incognizable
+        # structs_and_classes/name_history_2
+        # constructors/revers_string
+        # constructors/name_history_3
+        # constructors/incognizable
         )
 
 set(Week_4
-        lecture_title
         structs_and_classes/function
-        structs_and_classes/function_2
+        # structs_and_classes/function_2
         files_and_streams/print_file
         files_and_streams/rw_file
         files_and_streams/print_file_2
@@ -60,7 +59,7 @@ set(Week_4
         overload/rational_3
         overload/rational_4
         overload/rational_5
-        exceptions/exception
+        # exceptions/exception
         exceptions/rational_6
         exceptions/rational_7
         exceptions/ack_time_server

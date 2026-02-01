@@ -1,3 +1,6 @@
+# AI generated files
+*.idx
+
 # Build directories and binary files
 build/
 out/
